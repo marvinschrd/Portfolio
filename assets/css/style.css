@@ -228,7 +228,7 @@ article.active {
   text-transform: capitalize;
 }
 
-.h2 { font-size: var(--fs-1); }
+.h2 { font-size: var(--fs-2); }
 
 .h3 { font-size: var(--fs-2); }
 
@@ -249,7 +249,7 @@ article.active {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
+  width: 40px;
   height: 3px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
