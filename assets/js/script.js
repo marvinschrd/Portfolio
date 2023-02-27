@@ -22,6 +22,9 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
+// Projects variables
+const projectsItem = document.querySelectorAll("[data-filter-item]");
+
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
@@ -35,6 +38,7 @@ const testimonialsModalFunc = function () {
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
+  console.log(testimonialsItem.length)
 
   testimonialsItem[i].addEventListener("click", function () {
 
@@ -42,6 +46,22 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    testimonialsModalFunc();
+
+  });
+
+}
+
+// add click event to all project items
+for (let i = 0; i < projectsItem.length; i++) {
+
+  projectsItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[blog-banner-box]").src;
+    modalImg.alt = this.querySelector("[blog-banner-box]").alt;
+    // modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    // modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
 
